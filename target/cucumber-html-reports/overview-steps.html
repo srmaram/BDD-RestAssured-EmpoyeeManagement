@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>cucumberHTMLReport</td>
+            <td>01 Aug 2019, 19:47</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">ManageEmployeeSteps.Get_theCreatedempID()</td>
+              <td>4</td>
+              <td class="duration" data-value="182846249">0.182</td>
+              <td class="duration" data-value="182846249">0.696</td>
+              <td class="duration" data-value="731384999">0.731</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ManageEmployeeSteps.setup(Scenario)</td>
+              <td>4</td>
+              <td class="duration" data-value="1375134">0.001</td>
+              <td class="duration" data-value="1375134">0.005</td>
+              <td class="duration" data-value="5500537">0.005</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ManageEmployeeSteps.theUserdeleteemployee()</td>
+              <td>2</td>
+              <td class="duration" data-value="494525929">0.494</td>
+              <td class="duration" data-value="494525929">0.497</td>
+              <td class="duration" data-value="989051859">0.989</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ManageEmployeeSteps.the_Customer_with_Some_Conditions_as_from_the_Module(String,String)</td>
+              <td>4</td>
+              <td class="duration" data-value="292358132">0.292</td>
+              <td class="duration" data-value="292358132">1.147</td>
+              <td class="duration" data-value="1169432530">1.169</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ManageEmployeeSteps.update_the_employee_salary()</td>
+              <td>2</td>
+              <td class="duration" data-value="495799294">0.495</td>
+              <td class="duration" data-value="495799294">0.516</td>
+              <td class="duration" data-value="991598588">0.991</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ManageEmployeeSteps.user_create_new_Employee_based_on_provided_test_data_from()</td>
+              <td>1</td>
+              <td class="duration" data-value="2771341058">2.771</td>
+              <td class="duration" data-value="2771341058">2.771</td>
+              <td class="duration" data-value="2771341058">2.771</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ManageEmployeeSteps.user_create_new_Employee_based_on_provided_test_data_from_excel()</td>
+              <td>3</td>
+              <td class="duration" data-value="482486010">0.482</td>
+              <td class="duration" data-value="482486010">0.503</td>
+              <td class="duration" data-value="1447458031">1.447</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ManageEmployeeSteps.user_retrieves_the_employee_details_based_on_Employee_id()</td>
+              <td>5</td>
+              <td class="duration" data-value="563281561">0.563</td>
+              <td class="duration" data-value="563281561">0.929</td>
+              <td class="duration" data-value="2816407809">2.816</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ManageEmployeeSteps.verify_employee_salary_is_updated_successfully()</td>
+              <td>2</td>
+              <td class="duration" data-value="16206975">0.016</td>
+              <td class="duration" data-value="16206975">0.017</td>
+              <td class="duration" data-value="32413951">0.032</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ManageEmployeeSteps.verify_response_contains_Name_Salary_and_Age_and_those_values_matches_with_employee_record_which_was_created_andProfileimageispresent()</td>
+              <td>1</td>
+              <td class="duration" data-value="82489211">0.082</td>
+              <td class="duration" data-value="82489211">0.082</td>
+              <td class="duration" data-value="82489211">0.082</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ManageEmployeeSteps.verify_response_contains_Name_Salary_and_Age_and_those_values_matches_with_employee_record_which_was_created_earlier()</td>
+              <td>1</td>
+              <td class="duration" data-value="75819952">0.075</td>
+              <td class="duration" data-value="75819952">0.075</td>
+              <td class="duration" data-value="75819952">0.075</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ManageEmployeeSteps.verify_status_code()</td>
+              <td>6</td>
+              <td class="duration" data-value="14145709">0.014</td>
+              <td class="duration" data-value="14145709">0.080</td>
+              <td class="duration" data-value="84874257">0.084</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ManageEmployeeSteps.verifyemployeerecorddeletedsuccesfully()</td>
+              <td>2</td>
+              <td class="duration" data-value="11727426">0.011</td>
+              <td class="duration" data-value="11727426">0.012</td>
+              <td class="duration" data-value="23454852">0.023</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ManageEmployeeSteps.verifytherecordnotdisplayed()</td>
+              <td>1</td>
+              <td class="duration" data-value="237191">0.000</td>
+              <td class="duration" data-value="237191">0.000</td>
+              <td class="duration" data-value="237191">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>14</td>
+            <td>38</td>
+            <td class="duration">0.295</td>
+            <td class="duration">2.816</td>
+            <td class="duration">11.221</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
